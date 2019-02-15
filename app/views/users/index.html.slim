@@ -1,0 +1,25 @@
+h1 Listing users
+
+
+= will_paginate
+
+ul.users
+  - @users.each do |user|
+    li.user
+      | #{user.name}
+
+.page-load-status
+  /.loader-ellips.infinite-scroll-request
+  /  span.loader-ellips__dot
+  /  span.loader-ellips__dot
+  /  span.loader-ellips__dot
+  /  span.loader-ellips__dot
+  .infinite-scroll-request
+    | loading...
+  .infinite-scroll-last
+    | end of contents!!!
+  .infinite-scroll-error
+    | this is error message
+
+= will_paginate
+
